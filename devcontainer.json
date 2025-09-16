@@ -1,0 +1,19 @@
+{
+  "name": "R with DESeq2 & ggplot2",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "settings": {
+    "terminal.integrated.defaultProfile.linux": "bash"
+  },
+  "postCreateCommand": "R --version",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "REditorSupport.r", 
+        "Ikuyadeu.r",
+        "ms-toolsai.jupyter"
+      ]
+    }
+  }
+}
