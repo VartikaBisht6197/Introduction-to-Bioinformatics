@@ -1,14 +1,15 @@
 name: Intro_to_Bioinformatics
-name: intro_bioinformatics
 channels:
   - conda-forge
+  - bioconda
   - defaults
 dependencies:
   - python=3.11
-  - jupyterlab
   - r-base
   - r-irkernel
-  - r-tidyverse
+  - r-seqinr
   - bioconductor-biostrings
-  - bioconductor-seqinr
-  - mamba
+  - jupyterlab
+  - pip
+  - pip:
+      - notebook
