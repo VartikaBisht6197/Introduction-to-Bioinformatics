@@ -9,6 +9,8 @@ dependencies:
   - r-irkernel
   - r-seqinr
   - bioconductor-biostrings
+  - bioconductor-deseq2     
+  - r-ggplot2             
   - jupyterlab
   - pip
   - pip:
