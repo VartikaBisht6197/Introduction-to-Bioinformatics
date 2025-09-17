@@ -3,7 +3,6 @@
   "build": {
     "dockerfile": "Dockerfile"
   },
-  "postCreateCommand": "micromamba run -n main",
   "customizations": {
     "vscode": {
       "extensions": [
@@ -14,5 +13,14 @@
         "ms-python.vscode-pylance"
       ]
     }
+  },
+  "settings": {
+    "terminal.integrated.profiles.linux": {
+      "bash (main)": {
+        "path": "/bin/bash",
+        "args": ["-l", "-c", "micromamba activate main; exec bash"]
+      }
+    },
+    "terminal.integrated.defaultProfile.linux": "bash (main)"
   }
 }
