@@ -4,8 +4,7 @@ FROM mambaorg/micromamba:1.5.1
 COPY ../Intro_to_Bioinformatics.yml /tmp/Intro_to_Bioinformatics.yml
 
 # Install everything into base env
-RUN micromamba install -y -n base -f /tmp/Intro_to_Bioinformatics.yml && \
-    micromamba clean --all --yes
+RUN micromamba install -y -n main -f /tmp/Intro_to_Bioinformatics.yml
 
 # Make R kernel visible to Jupyter
 RUN R -e "IRkernel::installspec(user = FALSE)"
