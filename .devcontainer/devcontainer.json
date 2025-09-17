@@ -3,7 +3,7 @@
   "build": {
     "dockerfile": "Dockerfile"
   },
-  "postCreateCommand": "conda activate Intro_to_Bioinformatics",
+  "postCreateCommand": "micromamba run -n main",
   "customizations": {
     "vscode": {
       "extensions": [
