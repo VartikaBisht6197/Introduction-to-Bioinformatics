@@ -1,18 +1,23 @@
 {
-  "name": "R with DESeq2 & ggplot2",
+  "name": "R with DESeq2, ggplot2 & Jupyter",
   "build": {
     "dockerfile": "Dockerfile"
   },
   "settings": {
     "terminal.integrated.defaultProfile.linux": "bash"
   },
-  "postCreateCommand": "R --version",
+  "postCreateCommand": "R --version && python3 --version && jupyter --version",
   "customizations": {
     "vscode": {
       "extensions": [
-        "REditorSupport.r", 
+        "REditorSupport.r",
         "Ikuyadeu.r",
-        "ms-toolsai.jupyter"
+        "ms-toolsai.jupyter",
+        "ms-toolsai.jupyter-keymap",
+        "ms-toolsai.jupyter-renderers",
+        "ms-toolsai.vscode-jupyter-slideshow",
+        "ms-python.python",
+        "ms-python.vscode-pylance"
       ]
     }
   }
