@@ -4,7 +4,8 @@ FROM mambaorg/micromamba:1.5.1
 COPY Intro_to_Bioinformatics.yml /tmp/Intro_to_Bioinformatics.yml
 
 # Install everything into base env
-RUN micromamba create -y -n main -f /tmp/Intro_to_Bioinformatics.yml
+RUN micromamba install -y -f /tmp/Intro_to_Bioinformatics.yml -n base && \
+    micromamba clean --all -f -y
 
 # Initialize micromamba for all future shells
 SHELL ["bash", "-c"]
