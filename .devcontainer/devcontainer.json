@@ -1,21 +1,15 @@
 {
-  "name": "R with DESeq2, ggplot2 & Jupyter",
+  "name": "R+Python Jupyter Env",
   "build": {
     "dockerfile": "Dockerfile"
   },
-  "settings": {
-    "terminal.integrated.defaultProfile.linux": "bash"
-  },
-  "postCreateCommand": "R --version && python3 --version && jupyter --version",
+  "postCreateCommand": "micromamba install -y -n base -f environment.yml && R -e \"IRkernel::installspec(user = FALSE)\"",
   "customizations": {
     "vscode": {
       "extensions": [
         "REditorSupport.r",
         "Ikuyadeu.r",
         "ms-toolsai.jupyter",
-        "ms-toolsai.jupyter-keymap",
-        "ms-toolsai.jupyter-renderers",
-        "ms-toolsai.vscode-jupyter-slideshow",
         "ms-python.python",
         "ms-python.vscode-pylance"
       ]
