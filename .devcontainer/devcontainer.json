@@ -3,7 +3,7 @@
   "build": {
     "dockerfile": "Dockerfile"
   },
-  "postCreateCommand": "micromamba install -y -n base -f environment.yml && R -e \"IRkernel::installspec(user = FALSE)\"",
+  "postCreateCommand": "conda activate Intro_to_Bioinformatics",
   "customizations": {
     "vscode": {
       "extensions": [
